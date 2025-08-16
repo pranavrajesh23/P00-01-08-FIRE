@@ -1,6 +1,49 @@
 #include<iostream>
 using namespace std;
 
+void seepInFire();
+
+void upStairsRun()
+{
+    cout<<"\n-------------------------\n";
+    cout<<"RUNNING UP THE STAIRS\n";        
+    cout<<"-------------------------\n";
+
+    while(true)
+    {
+    cout<<"\nGo upstairs to escape the fire.\n";
+    cout<<"\nHave you reached the balcony?(yes/no)\n";
+    string response;
+    cin>>response;
+    if(response == "yes")
+    {
+        cout<<"\nYou have reached the balcony safely.\n";
+        cout<<"\nCall the fire department to report the fire.\n";
+        cout<<"\nWave at the window to signal for help.\n";
+        cout<<"\nWait for the fire department to arrive.\n";
+        break; 
+    }
+    else
+    {
+        cout<<"\nContinue to run upstairs.\n";
+        cout<<"\nDo you strong smoke upstairs?(yes/no)\n";
+        string res;
+        cin>>res;
+        if(res == "yes")
+        {
+            cout<<"\nFind and enter a safe room.\n";
+            seepInFire();
+            // cout<<"run downstairs to escape the smoke.\n";
+            break;
+        }
+        else
+        {
+            cout<<"\nContinue running upstairs.\n";
+        }
+        
+    }
+    }
+}
 
 void downStairsRun()
 {
