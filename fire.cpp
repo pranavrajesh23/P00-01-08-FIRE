@@ -2,6 +2,44 @@
 using namespace std;
 
 
+void downStairsRun()
+{
+    cout<<"\n-------------------------\n";
+    cout<<"RUNNING DOWN THE STAIRS\n";
+    cout<<"-------------------------\n";
+    while(true)
+    {
+    cout<<"\nGo downstairs untill you leave the building.\n";
+    cout<<"\nHave you escaped the building?(yes/no)\n";
+    string response;
+    cin>>response;
+    if(response == "yes")
+    {
+        cout<<"\nYou have escaped the building safely.\n";
+        cout<<"\nCall the fire department to report the fire.\n";
+        break;
+    }
+    else
+    {
+        cout<<"\nContinue to run downstairs.\n";
+        cout<<"\nDo you strong smoke downstairs?(yes/no)\n";
+        string res;
+        cin>>res;
+        if(res == "yes")
+        {
+            upStairsRun();
+            // cout<<"run upstairs to escape the smoke.\n";
+            break;
+        }
+        else
+        {
+            cout<<"\nContinue running downstairs.\n";
+        }
+        
+    }
+    }
+}
+
 void seepInFire()
 {
     cout<<"\n-------------------------\n";
